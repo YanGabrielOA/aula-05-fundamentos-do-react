@@ -7,6 +7,7 @@ import Welcome from "@/components/Welcome";
 import Head from "next/head";
 import TrafficLight from "@/components/TrafficLight";
 import Form from "@/components/form";
+import TaskList from "@/components/TaskList";
 
 export default function Home() {
   return (
@@ -40,6 +41,31 @@ export default function Home() {
         <br />
         <br />
         <Form />
+        {/* Lista de Tarefas  */}
+        {/* passando a lista de tarefas por props */}
+        <TaskList tasks={[
+          {
+          id:1,
+          text:"Estudar React"
+          },
+          {
+            id:2,
+            text:"Pagar os Boletos",
+          },
+          {
+            id:3,
+            text:"Retirar O Lixo",
+          },
+          {
+            id:4,
+            text:"Lavar Roupa"
+          }
+        
+        ]} />
+        <br />
+        <br />
+        <br />
+        <br />
       </main>
     </>
   );
